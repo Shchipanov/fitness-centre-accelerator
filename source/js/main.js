@@ -1,6 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {video, onYouTubeIframeAPIReady} from './modules/video';
+import {initVideo} from './modules/init-video';
 
 // ---------------------------------
 
@@ -18,8 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
-    video();
-    onYouTubeIframeAPIReady();
+    initVideo();
   });
 });
 

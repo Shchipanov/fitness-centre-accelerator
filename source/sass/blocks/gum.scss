@@ -123,7 +123,12 @@
     max-width: none;
     width: 100%;
     margin: 0;
+    aspect-ratio: 678/345;
   }
+}
+
+.gum__image img {
+  width: 100%;
 }
 
 .gum__video {
@@ -150,12 +155,18 @@
 }
 
 .gum__video-background {
-  position: absolute;
-  background-color: rgba(20, 54, 122, 0.5);
-  top: 0;
-  right: 357px;
-  bottom: 0;
-  left: 357px;
+  //position: absolute;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: rgba(20, 54, 122, 0.5);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .gum__video-player {

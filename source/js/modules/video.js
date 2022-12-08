@@ -7,6 +7,7 @@ const video = () => {
     evt.preventDefault();
     gumVideo.classList.add('gum__video--active');
     videoPlayer.play();
+    onYouTubeIframeAPIReady();
   });
 };
 
@@ -17,24 +18,8 @@ function onYouTubeIframeAPIReady() {
     videoId: '9TZXsZItgdw',
 
   });
-
-  function initialize() {
-    // Обновляем элементы управления и загружаем
-    updateTimerDisplay();
-    updateProgressBar();
-
-    // Сброс старого интервала
-    clearInterval(time_update_interval);
-
-    // Запускаем обновление таймера и дорожки проигрывания
-    // каждую секунду.
-    time_update_interval = setInterval(function () {
-      updateTimerDisplay();
-      updateProgressBar();
-    }, 1000);
-  }
   return player;
 }
 
 
-export {video, onYouTubeIframeAPIReady};
+export {video};

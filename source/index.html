@@ -71,13 +71,20 @@
               </picture>
             </div>
             <div class="gum__video" data-video>
-              <div class="gum__video-background"></div>
-              <picture>
-                <source type="image/webp" srcset="img/poster.webp 1x, img/poster@2x.webp 2x">
-                <img class="gum__video-poster" src="img/poster.jpg" srcset="img/poster@2x.jpg 2x" alt="Видео - тренажерный зал." width="364" height="228">
-              </picture>
-              <video class="gum__video-player" data-video-player src="https://www.youtube.com/watch?v=9TZXsZItgdw" id="video-placeholder" width="364" height="228" controls></video>
-              <button type="button" class="gum__video-btn" aria-label="Воспроизвести видео." data-video-btn></button>
+              <div class="gum__video-background">
+                <picture>
+                  <source type="image/webp" srcset="img/poster.               webp 1x, img/poster@2x.webp 2x">
+                  <img class="gum__video-poster" src="img/poster.               jpg" srcset="img/poster@2x.jpg 2x" alt="Видео -               тренажерный зал." width="364" height="228">
+                </picture>
+                <a class="gum__video-btn" href="https://www.youtube.com/watch?v=9TZXsZItgdw" data-video-btn>
+                  <span class="visually-hidden">Воспроизвести видео.</span>
+                </a>
+              </div>
+              <div class="gum__video-player" id="player" data-video-player></div>
+
+              <!--<video class="gum__video-player" data-video-player src="https://www.youtube.com/watch?v=9TZXsZItgdw" id="video-placeholder" width="364" height="228" controls></video>
+
+              <!--<button type="button" class="gum__video-btn" aria-label="Воспроизвести видео." data-video-btn></button>-->
             </div>
           </div>
         </section>

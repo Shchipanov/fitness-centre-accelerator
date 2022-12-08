@@ -980,6 +980,10 @@ button,
   background-color: #b6bdcc;
 }
 
+.gum__image img {
+  width: 100%;
+}
+
 .gum__video {
   margin: -112px 0 0 77px;
   width: 100%;
@@ -1001,12 +1005,17 @@ button,
 }
 
 .gum__video-background {
+  position: relative;
+}
+
+.gum__video-background::before {
   position: absolute;
+  content: "";
   background-color: rgba(20, 54, 122, 0.5);
   top: 0;
-  right: 357px;
+  right: 0;
   bottom: 0;
-  left: 357px;
+  left: 0;
 }
 
 .gum__video-player {
@@ -1214,6 +1223,7 @@ button,
     max-width: none;
     width: 100%;
     margin: 0;
+    aspect-ratio: 678/345;
   }
 
   .gum__video {
