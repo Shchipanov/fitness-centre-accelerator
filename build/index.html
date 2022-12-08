@@ -30,7 +30,7 @@
                 <h1 class="nav-description__title">Фитнес центр</h1>
                 <ul class="nav-description__list">
                   <li class="nav-description__item">
-                    <a href="#">Тренажёрный зал</a>
+                    <a href="#gum">Тренажёрный зал</a>
                   </li>
                   <li class="nav-description__item">
                     <a href="#">Групповые занятия</a>
@@ -42,7 +42,6 @@
               </div>
               <a class="nav-description__btn btn" href="#membership">Купить абонемент</a>
             </div>
-
             <div class="main-nav__image">
               <picture>
                 <source type="image/webp" srcset=" img/main-block.webp 1x, img/main-block@2x.webp 2x">
@@ -53,25 +52,32 @@
         </nav>
       </header>
       <main class="main">
-        <section class="gum">
+        <section class="gum" id="gum">
           <div class="gum__container container">
-            <div class="gum__wrapper">
-              <div class="gum__description">
-                <h2>Тренажерный зал</h2>
-                <h3>Просторный зал площадью 900&nbsp;кв/м</h3>
-                <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом
+            <div class="gum__description">
+              <h2>Тренажерный зал</h2>
+              <h3>Просторный зал площадью 900&nbsp;кв/м</h3>
+              <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом
                 и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым
                 современным оборудованием для всех спортсменов.</p>
-                <p>В&nbsp;зале расположены отдельная зона для
+              <p>В&nbsp;зале расположены отдельная зона для
                 Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес центре есть несколько
                 оборудованных залов для различных видов групповых занятий.</p>
-              </div>
-              <div class="gum__image">
-                <picture>
-                  <source type="image/webp" srcset=" img/gum.webp 1x, img/gum@2x.webp 2x">
-                  <img alt="Тренажёрный зал." width="660" height="401" src="img/gum.jpg" srcset="img/gum@2x.jpg 2x">
-                </picture>
-              </div>
+            </div>
+            <div class="gum__image">
+              <picture>
+                <source type="image/webp" srcset=" img/gum.webp 1x, img/gum@2x.webp 2x">
+                <img alt="Тренажёрный зал." width="660" height="401" src="img/gum.jpg" srcset="img/gum@2x.jpg 2x">
+              </picture>
+            </div>
+            <div class="gum__video" data-video>
+              <div class="gum__video-background"></div>
+              <picture>
+                <source type="image/webp" srcset="img/poster.webp 1x, img/poster@2x.webp 2x">
+                <img class="gum__video-poster" src="img/poster.jpg" srcset="img/poster@2x.jpg 2x" alt="Видео - тренажерный зал." width="364" height="228">
+              </picture>
+              <video class="gum__video-player" data-video-player src="https://www.youtube.com/watch?v=9TZXsZItgdw" id="video-placeholder" width="364" height="228" controls></video>
+              <button type="button" class="gum__video-btn" aria-label="Воспроизвести видео." data-video-btn></button>
             </div>
           </div>
         </section>
@@ -82,7 +88,7 @@
       </footer>
     </div>
 
-
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

@@ -872,6 +872,16 @@ button,
   color: #ffffff;
 }
 
+.nav-description__item a:hover,
+.nav-description__item a:active,
+.nav-description__item a:focus {
+  color: #ed0233;
+}
+
+.nav-description__item a:focus {
+  outline: none;
+}
+
 .nav-description__btn {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
@@ -904,6 +914,144 @@ button,
 
 .nav-description__btn:active {
   color: #ed0233;
+}
+
+.gum {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.gum__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 1237px;
+  margin: 0 auto;
+  gap: 3%;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.gum__description {
+  max-width: 355px;
+  padding: 38px 0 20px 0;
+  margin: 0 0 0 57px;
+}
+
+.gum__description h2 {
+  margin: 0 0 6px 0;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+  color: #102654;
+}
+
+.gum__description h3 {
+  margin: 0 0 39px 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #102654;
+}
+
+.gum__description p {
+  margin: 0 0 8px 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #102654;
+}
+
+.gum__description p:last-of-type {
+  margin: 0 15px 0 0;
+}
+
+.gum__image {
+  height: 100%;
+  margin-left: auto;
+  background-color: #b6bdcc;
+}
+
+.gum__video {
+  margin: -112px 0 0 77px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.gum__video iframe {
+  max-width: 364px;
+  height: 228px;
+}
+
+.gum__video-background {
+  position: absolute;
+  background-color: rgba(20, 54, 122, 0.5);
+  top: 0;
+  right: 357px;
+  bottom: 0;
+  left: 357px;
+}
+
+.gum__video-player {
+  display: none;
+  aspect-ratio: 364/228;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.gum__video-poster {
+  width: 100%;
+  height: auto;
+}
+
+.gum__video-btn {
+  position: absolute;
+  content: "";
+  border: none;
+  background-color: inherit;
+  width: 100px;
+  height: 100px;
+  background-image: url("../img/svg/video-btn.svg");
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background-size: contain;
+}
+
+.gum__video--active .gum__video-player {
+  display: block;
+}
+
+.gum__video--active .gum__video-btn {
+  display: none;
+}
+
+.gum__video--active .gum__video-poster {
+  display: none;
+}
+
+.gum__video--active .gum__video-background {
+  display: none;
 }
 
 /* @mixin hover-focus {
@@ -1025,6 +1173,61 @@ button,
     margin-left: auto;
     padding: 21px 30px;
   }
+
+  .gum__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .gum__description {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  .gum__description h2 {
+    margin: 0 14px 0 0;
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .gum__description h3 {
+    margin: 0 0 33px 0;
+  }
+
+  .gum__description p {
+    width: 80%;
+    margin: 0 auto 44px;
+  }
+
+  .gum__description p:last-of-type {
+    display: none;
+  }
+
+  .gum__image {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  .gum__video {
+    margin: -84px 0 0 0px;
+  }
+
+  .gum__video-player {
+    aspect-ratio: 266/167;
+  }
+
+  .gum__video-btn {
+    width: 73px;
+    height: 73px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1087,6 +1290,41 @@ button,
     width: 100%;
     margin-top: 23px;
     max-width: 100%;
+  }
+
+  .gum__container {
+    gap: 33px;
+  }
+
+  .gum__description {
+    padding: 0 15px;
+  }
+
+  .gum__description h2 {
+    text-align: left;
+    margin: 0 14px 6px 0;
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .gum__description h3 {
+    text-align: left;
+    margin: 0 0 24px 0;
+  }
+
+  .gum__description p {
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    padding-right: 20px;
+  }
+
+  .gum__video {
+    margin: 8px 0 0 0px;
+  }
+
+  .gum__video-player {
+    aspect-ratio: 320/167;
   }
 }
 
