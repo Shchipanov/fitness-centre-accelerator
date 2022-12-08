@@ -1001,7 +1001,7 @@ button,
 
 .gum__video iframe {
   max-width: 364px;
-  height: 228px;
+  max-height: 228px;
 }
 
 .gum__video-background {
@@ -1020,9 +1020,6 @@ button,
 
 .gum__video-player {
   display: none;
-  aspect-ratio: 364/228;
-  -o-object-fit: cover;
-  object-fit: cover;
 }
 
 .gum__video-poster {
@@ -1191,6 +1188,8 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   .gum__description {
@@ -1198,6 +1197,7 @@ button,
     max-width: none;
     padding: 0;
     text-align: center;
+    margin: 0;
   }
 
   .gum__description h2 {
@@ -1223,6 +1223,9 @@ button,
     max-width: none;
     width: 100%;
     margin: 0;
+  }
+
+  .gum__image img {
     aspect-ratio: 678/345;
   }
 
@@ -1230,8 +1233,14 @@ button,
     margin: -84px 0 0 0px;
   }
 
-  .gum__video-player {
-    aspect-ratio: 266/167;
+  .gum__video iframe {
+    max-width: 266px;
+    max-height: 167px;
+  }
+
+  .gum__video-poster {
+    max-width: 266px;
+    max-height: 167px;
   }
 
   .gum__video-btn {
@@ -1304,6 +1313,7 @@ button,
 
   .gum__container {
     gap: 33px;
+    padding: 63px 0;
   }
 
   .gum__description {
@@ -1329,11 +1339,29 @@ button,
     padding-right: 20px;
   }
 
+  .gum__image img {
+    aspect-ratio: 320/313;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
   .gum__video {
     margin: 8px 0 0 0px;
   }
 
-  .gum__video-player {
+  .gum__video iframe {
+    aspect-ratio: 320/313;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .gum__video-background {
+    width: inherit;
+  }
+
+  .gum__video-poster {
+    max-width: 100%;
+    max-height: 100%;
     aspect-ratio: 320/167;
   }
 }
