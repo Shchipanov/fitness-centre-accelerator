@@ -21,7 +21,7 @@
 
   @include vp-767 {
     gap: 33px;
-    padding: 63px 0;
+    padding: 63px 0 70px;
   }
 }
 
@@ -99,7 +99,6 @@
   @include vp-1199 {
     width: 80%;
     margin: 0 auto 44px;
-    //padding-right: 0;
   }
 
   @include vp-767 {
@@ -121,7 +120,7 @@
 .gum__image {
   height: 100%;
   margin-left: auto;
-  background-color: #b6bdcc;
+  background-color: $color-spindle;
 
   @include vp-1199 {
     max-width: none;
@@ -170,7 +169,8 @@
   }
 
   @include vp-767 {
-    aspect-ratio: 320/313;
+    max-height: 100%;
+    height: 53vw;
     max-width: 100%;
     width: 100%;
   }
@@ -182,7 +182,7 @@
   &::before {
     position: absolute;
     content: "";
-    background-color: rgba(20, 54, 122, 0.5);
+    background-color: $color-filter;
     top: 0;
     right: 0;
     bottom: 0;
@@ -196,16 +196,6 @@
 
 .gum__video-player {
   display: none;
-  //aspect-ratio: 364/228;
-  //object-fit: cover;
-
-  //@include vp-1199 {
-    //aspect-ratio: 266/167;
-  //}
-
-  //@include vp-767 {
-    //aspect-ratio: 320/167;
-  //}
 }
 
 .gum__video-poster {
