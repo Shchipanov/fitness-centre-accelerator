@@ -131,7 +131,7 @@
   }
 }
 
-.card a {
+.card__btn {
   padding: 25px 45px 23px;
   font-family: $ff-robotocondensed;
   font-style: normal;
@@ -141,6 +141,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $color-sapphire;
+  background: transparent;
   border: 2px solid $color-sapphire;
   text-align: center;
 

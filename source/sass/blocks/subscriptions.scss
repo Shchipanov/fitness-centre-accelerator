@@ -5,7 +5,7 @@
   background-color: $color-ghost-white;
 
   background-image: url("../img/background/weights.png");
-  background-position: 100% 141%;
+  background-position: 100% 110%;
   background-repeat: no-repeat;
   background-size: 288px 490px;
 
@@ -16,8 +16,8 @@
   }
 
   @include vp-1199 {
-    background-position: 100% 1458px;
-    background-size: 348px 450px;
+    background-position: 100% 1459px;
+    background-size: 346px 447px;
     background-image: url("../img/background/weights-tablet.png");
 
     @include retina {
@@ -30,7 +30,7 @@
   max-width: 1237px;
   width: 100%;
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 220px;
 
   @include vp-1199 {
     padding-top: 100px;

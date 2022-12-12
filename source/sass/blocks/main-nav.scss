@@ -4,18 +4,23 @@
 }
 
 .main-nav__top {
+  margin: 0 0 6px 0;
   display: flex;
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
+  z-index: 3;
+  position: relative;
 
   @include vp-1199 {
-    padding-bottom: 20px;
+    padding-bottom: 13px;
   }
 }
 
 .main-nav__logo {
   margin: 7px 0 0 0;
+  max-width: 119px;
+  max-height: 23px;
 
   @include vp-1199 {
     width: 82px;
@@ -32,6 +37,12 @@
 
 .main-nav__logo svg {
   fill: $color-default-white;
+}
+
+.main-nav__phone {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 160px;
 }
 
 .main-nav__phone a {
@@ -74,14 +85,12 @@
   gap: 65px;
 
   @include vp-1199 {
-    //padding-right: 0;
     gap: 30px;
     max-width: 800px;
     margin: 0 auto;
   }
 
   @include vp-767 {
-    //padding-top: 0;
     max-width: 500px;
   }
 }
