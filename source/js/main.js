@@ -3,6 +3,8 @@ import {initModals} from './modules/modals/init-modals';
 import {initVideo} from './modules/init-video';
 import {initTabs} from './modules/init-tabs';
 // import {findVideos} from './modules/video';
+// import './modules/swiper-2';
+import {sliderTrainers, sliderFeedback} from './modules/slider';
 
 // ---------------------------------
 
@@ -23,6 +25,9 @@ window.addEventListener('DOMContentLoaded', () => {
     initVideo();
     initTabs();
     // findVideos();
+    sliderTrainers();
+
+    sliderFeedback();
   });
 });
 
