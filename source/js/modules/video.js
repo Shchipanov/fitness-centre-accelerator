@@ -1,6 +1,5 @@
 const videos = document.querySelectorAll('[data-video]');
 const MEDIA = '9TZXsZItgdw';
-const QUERY = '?rel=0&showinfo=0&autoplay=1';
 
 function findVideos() {
   if (videos.length >= 1) {
@@ -12,7 +11,6 @@ function findVideos() {
 
 function setupVideo(video) {
   const link = video.querySelector('[data-video-btn]');
-  // const button = video.querySelector("[data-video-button]");
 
   video.addEventListener('click', () => {
     const iframe = createIframe(MEDIA);
@@ -38,7 +36,7 @@ function createIframe(id) {
 }
 
 function generateURL(id) {
-  return 'https://www.youtube.com/embed/' + id + QUERY;
+  return 'https://www.youtube.com/embed/' + id;
 }
 
 export {findVideos};

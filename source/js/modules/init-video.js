@@ -18,6 +18,6 @@ export const initVideo = function () {
         onReady: (e) => e.target.playVideo(),
       },
     });
-    // evt.stopPropagation();
+    evt.stopPropagation();
   });
 };

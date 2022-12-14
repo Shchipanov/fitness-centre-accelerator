@@ -1,14 +1,6 @@
 const tabsControl = document.querySelectorAll('[data-tab-control]');
 const tabsContent = document.querySelectorAll('[data-tab-content]');
 
-const removeNotJsTab = (elements) => {
-  if (elements.length >= 1) {
-    elements.forEach((element) => {
-      element.classList.remove("is-not-js");
-    });
-  }
-};
-
 const selectTab = () => {
   if (tabsControl.length >= 1) {
     for (let i = 0; i < tabsControl.length; i++) {
@@ -29,4 +21,12 @@ const selectTab = () => {
   }
 };
 
-export { selectTab, removeNotJsTab, tabsControl, tabsContent };
+const removeNotJsTab = (elements) => {
+  if (elements.length >= 1) {
+    elements.forEach((element) => {
+      element.classList.remove('is-not-js');
+    });
+  }
+};
+
+export {selectTab, removeNotJsTab, tabsControl, tabsContent};
