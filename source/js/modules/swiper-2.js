@@ -1,74 +1,56 @@
-import Swiper, {Navigation} from 'swiper';
-// Swiper.use([Navigation]);
+import Swiper, { Navigation } from "swiper";
 
-const sliderTrainersList = document.querySelector('.swiper');
-const sliderFeedbackList = document.querySelector('.swiper-feedback');
+const swiperTrainers = document.querySelectorAll(".trainers__swiper");
+const swiperList = document.querySelector(".swiper-wrapper");
+const swiperButtons = document.querySelectorAll("[data-swiper-button]");
 
+const addTrainersSwiper = () => {
+  if (!swiperTrainers) {
+    return;
+  }
 
-if (sliderTrainersList) {
-  const mySwiper = new Swiper(sliderTrainersList, {
-    loop: true,
-
-    [Navigation]: {
-      nextEl: '.swiper-button-trainers-next',
-      prevEl: '.swiper-button-trainers-prev',
-    },
-
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 1,
-      },
-
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 30,
-      },
-
-      1066: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-
-      1200: {
-        slidesPerView: 4,
-        spaceBetween: 40,
-      },
-    },
-  });
-
-  const toSlide = () => {
-    if (
-      sliderTrainersList &&
-        window.innerWidth <= 1199 &&
-        window.innerWidth >= 768
-    ) {
-      mySwiper.slideTo(4);
-    } else if (sliderTrainersList && window.innerWidth <= 767) {
-      mySwiper.slideTo(3);
-    }
-  };
-
-  toSlide();
-
-  window.addEventListener('resize', () => {
-    toSlide();
-  });
-}
-
-if (sliderFeedbackList) {
-  const FeedbackSwiper = new Swiper(sliderFeedbackList, {
-    slidesPerView: 1,
+  const swiper = new Swiper(".trainers__swiper", {
+    modules: [Navigation],
+    direction: "horizontal",
+    slidesPerView: 4,
     spaceBetween: 40,
+    watchOverflow: true,
     loop: true,
 
     navigation: {
-      nextEl: '.swiper-button-feedback-next',
-      prevEl: '.swiper-button-feedback-prev',
+      nextEl: ".trainers__button--next",
+      prevEl: ".trainers__button--prev",
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        initialSlide: 2,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        initialSlide: 2,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+        initialSlide: 0,
+      },
     },
   });
+  swiper.init();
+  const duplicates = document.querySelectorAll(".swiper-slide-duplicate");
+  duplicates.forEach((el) => el.removeAttribute("tabindex"));
+};
 
-  FeedbackSwiper.slideTo(1);
-}
+const removeClasses = () => {
+  if (!swiperButtons || !swiperList) {
+    return;
+  }
+  swiperButtons.forEach((el) => el.classList.remove("no-js"));
+  swiperList.classList.remove("no-js");
+};
 
-
+export { addTrainersSwiper, removeClasses };

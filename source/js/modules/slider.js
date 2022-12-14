@@ -1,7 +1,13 @@
 import Swiper, {Navigation} from 'swiper';
 
+const swiperButtons = document.querySelector('[data-swiper-button]');
+const swiperContainer = document.querySelector('[data-swiper]');
+
+swiperButtons.classList.remove('trainers__slider-control--not-js');
+swiperContainer.classList.remove('trainers__slider--not-js');
 
 const sliderTrainers = () =>
+
   new Swiper('[data-swiper]', {
     modules: [Navigation],
 
@@ -38,6 +44,10 @@ const sliderTrainers = () =>
     },
 
     breakpoints: {
+      80: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
       320: {
         slidesPerView: 1,
         spaceBetween: 20,
@@ -84,4 +94,12 @@ const sliderTrainers = () =>
   // });
 };*/
 
-export {sliderTrainers};
+const removeNotJs = () => {
+  if (!swiperButtons || !swiperContainer) {
+    return;
+  }
+  swiperButtons.classList.remove('trainers__slider-control--not-js');
+  swiperContainer.classList.remove('trainers__slider--not-js');
+};
+
+export {sliderTrainers, removeNotJs};

@@ -44,12 +44,12 @@
   }
 }
 
-.tabs__item:focus-within a {
-  color: $color-sapphire;
-}
+.tabs__item a {
+  @include focus {
+    color: $color-sapphire;
+  outline: none
+  }
 
-.tabs__item:focus-visible {
-  outline: none;
 }
 
 .tabs__list::before {
@@ -87,4 +87,8 @@
       width: 116%;
     }
   }
+}
+
+.tabs__item.is-not-js::after {
+  display: none;
 }

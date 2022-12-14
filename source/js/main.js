@@ -4,8 +4,14 @@ import {initVideo} from './modules/init-video';
 import {initTabs} from './modules/init-tabs';
 // import {findVideos} from './modules/video';
 // import './modules/swiper-2';
-import {sliderTrainers, sliderFeedback} from './modules/slider';
+import {sliderTrainers, removeNotJs} from './modules/slider';
 
+import {
+  selectTab,
+  removeNotJsTab,
+  tabsContent,
+  tabsControl
+} from "./modules/tabs";
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -23,11 +29,14 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initModals();
     initVideo();
-    initTabs();
+    // initTabs();
     // findVideos();
     sliderTrainers();
+    removeNotJs();
 
-    sliderFeedback();
+    selectTab();
+    removeNotJsTab(tabsContent);
+    removeNotJsTab(tabsControl);
   });
 });
 
