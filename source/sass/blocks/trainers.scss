@@ -228,6 +228,7 @@
   object-fit: cover;
   width: 100%;
   height: auto;
+  aspect-ratio: 260/294;
 
   @include vp-1199 {
     max-width: 100%;
