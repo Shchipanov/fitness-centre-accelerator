@@ -3,7 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {initVideo} from './modules/init-video';
 
 // import {findVideos} from './modules/video';
-import {sliderTrainers, removeNotJs} from './modules/slider';
+import {sliderTrainers, sliderReviews, removeNotJs} from './modules/slider';
 
 import {
   selectTab,
@@ -30,6 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initVideo();
     // findVideos();
     sliderTrainers();
+    sliderReviews();
     removeNotJs();
     selectTab();
     removeNotJsTab(tabsContent);

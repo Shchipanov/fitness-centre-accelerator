@@ -1,5 +1,6 @@
 .card {
   padding: 55px 10px 60px;
+
   display: flex;
   flex-direction: column;
   border: 7px solid transparent;
@@ -35,6 +36,7 @@
 
 .card h3 {
   margin: 0 0 11px;
+
   font-family: $ff-robotocondensed;
   font-style: normal;
   font-weight: 700;
@@ -55,6 +57,7 @@
 
 .card span {
   margin: 0 0 67px;
+
   font-family: $ff-robotocondensed;
   font-style: normal;
   font-weight: 400;
@@ -72,11 +75,12 @@
 }
 
 .card__price {
+  margin: 0 0 34px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 0 34px;
 
   @include vp-767 {
     margin: 0 0 29px;
@@ -86,6 +90,7 @@
 
 .card__price-cash {
   margin: -28px 0 0 3px;
+
   font-family: $ff-robotocondensed;
   font-style: normal;
   font-weight: 700;
@@ -107,6 +112,7 @@
 
 .card__price-shadow {
   margin: 0;
+
   font-family: $ff-robotocondensed;
   font-style: normal;
   font-weight: 700;
@@ -133,6 +139,7 @@
 
 .card__btn {
   padding: 25px 45px 23px;
+  
   font-family: $ff-robotocondensed;
   font-style: normal;
   font-weight: 700;

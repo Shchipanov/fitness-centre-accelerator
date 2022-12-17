@@ -1,4 +1,7 @@
 .main-header {
+  padding-top: 31px;
+  padding-bottom: 52px;
+  
   background: conic-gradient(
     from 130.31deg at 16.03% 39.06%,
     #b80027 -46.69deg,
@@ -10,8 +13,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  padding-top: 31px;
-  padding-bottom: 52px;
+  
 
   @include vp-1199 {
     padding-top: 33px;

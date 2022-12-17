@@ -5,8 +5,9 @@
 
 .main-nav__top {
   margin: 0 0 6px 0;
-  display: flex;
   width: 100%;
+
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   z-index: 3;
@@ -85,9 +86,10 @@
   gap: 65px;
 
   @include vp-1199 {
-    gap: 30px;
     max-width: 800px;
     margin: 0 auto;
+
+    gap: 30px;
   }
 
   @include vp-767 {
@@ -99,6 +101,7 @@
   margin: -17px 199px 0 auto;
   max-width: 500px;
   height: auto;
+
   flex-shrink: 0;
 
   @include vp-1199 {
@@ -114,6 +117,7 @@
 .main-nav__image img {
   width: 100%;
   height: auto;
+
   object-fit: contain;
 
   @include vp-1199 {
