@@ -4,13 +4,13 @@ import {initVideo} from './modules/init-video';
 
 // import {findVideos} from './modules/video';
 import {sliderTrainers, sliderReviews, removeNotJs} from './modules/slider';
-
 import {
   selectTab,
   removeNotJsTab,
   tabsContent,
   tabsControl
 } from './modules/tabs';
+import {getMask} from './modules/get-mask';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -35,6 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
     selectTab();
     removeNotJsTab(tabsContent);
     removeNotJsTab(tabsControl);
+    getMask();
   });
 });
 

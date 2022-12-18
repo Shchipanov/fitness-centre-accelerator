@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья.">
     <title>Фитнес центр - Supergym</title>
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="js/main.min.js" as="script">
     <link rel="preload" href="fonts/alumnisans-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/robotocondensed-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
@@ -526,8 +528,50 @@
           </div>
         </section>
 
+        <section class="contacts-form">
+          <h2 class="visually-hidden">Форма записи на бесплатное занитие и контакты</h2>
+          <div class="contacts-form__container container">
+            <section class="free-class">
+              <h2>Бесплатное занятие</h2>
+              <form class="free-class__form" method="post" action="https://echo.htmlacademy.ru" enctype="multipart/form-data" autocomplete="off">
+                <div class="free-class__input-wrapper">
+                  <label for="name">
+                    <input type="text" name="your-name" placeholder="Имя" pattern="^[a-zA-ZA-Яа-яЁё\s\D [^0-9]]+$" id="name" minlength="1" maxlength="30" required>
+                  </label>
+                  <label for="phone">
+                    <input type="tel" id="phone" name="your-phone" placeholder="Телефон" data-phone minlength="10" pattern="8[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}" required>
+                  </label>
+                </div>
+                <button class="free-class__btn btn" type="submit" data-button="submit-button">отправить</button>
+              </form>
+            </section>
 
+            <section class="contacts">
+              <div class="contacts__wrapper">
+                <h2>Контакты</h2>
+                <ul class="contacts__list">
+                  <li class="contacts__item contacts__item--address">
+                    <h3>Адрес:</h3>
+                    <p>г. Омск, ул. 60 лет Октября, 7</p>
+                  </li>
+                  <li class="contacts__item contacts__item-phone">
+                    <h3>Телефон:</h3>
+                    <a href="tel:+88005555555">8-800-555-55-55</a>
+                  </li>
+                  <li class="contacts__item contacts__item--schedule" id="schedule">
+                    <h3>График работы:</h3>
+                    <p>Пн-Вс: с 8:00 до 22:00</p>
+                  </li>
+                  <li class="contacts__item contacts__item-email">
+                    <h3>Email:</h3>
+                    <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
 
+          </section>
 
 
 

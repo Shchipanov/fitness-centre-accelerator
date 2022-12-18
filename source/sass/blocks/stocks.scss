@@ -208,9 +208,8 @@
 
   &:focus {
     color: $color-of-torch-red;
-    border: 1px solid $color-of-torch-red;
+    border-bottom: 1px solid #ed0233;
     outline: none;
-    line-height: 13px;
   }
 
   @include vp-767 {
