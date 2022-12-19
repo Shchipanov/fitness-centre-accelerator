@@ -19,20 +19,24 @@
 }
 
 .main-nav__logo {
-  margin: 7px 0 0 0;
+  margin: 0;
   max-width: 119px;
   max-height: 23px;
+  width: 100%;
+  height: 100%;
 
   @include vp-1199 {
+    margin: 7px 0 0 0;
+
     width: 82px;
     height: 17px;
-    margin-left: 0;
   }
 
   @include vp-767 {
+    margin: 0;
+
     width: 68px;
     height: 23px;
-    margin-top: 0;
   }
 }
 
@@ -41,9 +45,10 @@
 }
 
 .main-nav__phone {
+  max-width: 160px;
+
   display: flex;
   flex-wrap: wrap;
-  max-width: 160px;
 }
 
 .main-nav__phone a {
@@ -81,8 +86,9 @@
 }
 
 .main-nav__description {
-  display: flex;
   width: 100%;
+
+  display: flex;
   gap: 65px;
 
   @include vp-1199 {

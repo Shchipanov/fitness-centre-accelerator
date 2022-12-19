@@ -34,19 +34,19 @@
 
   @include vp-1199 {
     padding-top: 100px;
-    padding-bottom: 160px;
+    padding-bottom: 154px;
   }
 
   @include vp-767 {
     padding-top: 63px;
-    padding-bottom: 70px;
+    padding-bottom: 68px;
   }
 }
 
 .subscriptions__container h2 {
-  text-align: center;
-  margin: 0 0 17px 0;
+  margin: 0 5px 17px 0;
 
+  text-align: center;
   font-family: $ff-alumnisans;
   font-weight: 600;
   font-size: 54px;
@@ -55,13 +55,15 @@
   color: $color-sapphire;
 
   @include vp-1199 {
-    margin: 0 9px 20px 0;
+    margin: 0 14px 20px 0;
+
     font-size: 42px;
     line-height: 50px;
   }
 
   @include vp-767 {
     margin: 0 11px 20px 0;
+
     font-size: 32px;
     line-height: 38px;
   }
@@ -75,13 +77,14 @@
 .subscriptions__sublist {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
 .subscriptions__sublist {
+  width: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
   gap: 10px;
   display: none;
 

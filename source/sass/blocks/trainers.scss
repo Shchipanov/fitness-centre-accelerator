@@ -3,6 +3,7 @@
   padding-bottom: 93px;
   width: 100%;
   max-width: 1238px;
+
   position: relative;
 
   @include vp-1199 {
@@ -25,17 +26,20 @@
   color: inherit;
 
   @include vp-1199 {
+    margin: 0 0 32px -5px;
+
     display: flex;
     justify-content: center;
+
     font-size: 42px;
     line-height: 50px;
-    margin: 0 0 32px -5px;
   }
 
   @include vp-767 {
+    margin: 0 5px 42px 0;
+
     font-size: 32px;
     line-height: 38px;
-    margin: 0 5px 42px 0;
   }
 }
 
@@ -62,6 +66,7 @@
 .trainers__list {
   margin: 0;
   padding: 0;
+
   list-style-type: none;
 }
 
@@ -107,6 +112,7 @@
 .trainers__item-description {
   position: absolute;
   padding: 52px 37px 53px;
+
   top: 0;
   left: 0;
   bottom: 0;
@@ -126,9 +132,10 @@
 .trainers__item:hover .trainers__item-description > h3,
 .trainers__item:active .trainers__item-description > h3,
 .trainers__item:focus-visible .trainers__item-description > h3 {
+  margin: 0 0 -4px 0;
+
   display: block;
   position: initial;
-  margin: 0 0 -4px 0;
 
   @include vp-1199 {
     margin: 0 0 -4px -4px;
@@ -140,9 +147,10 @@
 }
 
 .trainers__item-description span {
+  margin: 0 0 33px;
+
   display: block;
   text-align: center;
-  margin: 0 0 33px;
 
   font-family: $ff-robotocondensed;
   font-weight: 400;
@@ -158,9 +166,11 @@
 .trainers__item-description ul {
   margin: 0;
   padding: 0 0 0 33px;
-  list-style: none;
+
   display: flex;
   flex-direction: column;
+
+  list-style: none;
 
   @include vp-1199 {
     padding: 0 0 0 34px;
@@ -199,14 +209,16 @@
 }
 
 .trainers__image {
-  object-position: right;
-  object-fit: cover;
   width: 100%;
   height: auto;
+
+  object-position: right;
+  object-fit: cover;
   aspect-ratio: 260/294;
 
   @include vp-1199 {
     max-width: 100%;
+
     aspect-ratio: 268/294;
   }
 

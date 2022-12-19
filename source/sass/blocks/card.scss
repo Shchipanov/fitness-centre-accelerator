@@ -133,13 +133,13 @@
   color: $color-sapphire;
 
   @include vp-767 {
-    font-size: 40px;
+    font-size: 43px;
   }
 }
 
 .card__btn {
   padding: 25px 45px 23px;
-  
+
   font-family: $ff-robotocondensed;
   font-style: normal;
   font-weight: 700;
