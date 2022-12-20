@@ -1672,8 +1672,8 @@ button,
   height: 100%;
 }
 
-.nav-description__city,
-.nav-description__title {
+.nav-description__wrapper p,
+.nav-description__wrapper h1 {
   margin: 0;
 }
 
@@ -1688,7 +1688,7 @@ button,
   flex-direction: column;
 }
 
-.nav-description__city {
+.nav-description__wrapper p {
   margin: 0 50px 0 0;
   font-family: "Alumni Sans", "Arial", sans-serif;
   font-weight: 600;
@@ -1712,7 +1712,7 @@ button,
   flex-wrap: wrap;
 }
 
-.nav-description__title {
+.nav-description__block h1 {
   margin: 15px 0 0 0;
   font-family: "Alumni Sans", "Arial", sans-serif;
   font-style: normal;
@@ -2115,7 +2115,7 @@ button,
 }
 
 .card:hover,
-.card:focus,
+.card:focus-within,
 .card:active {
   border: 7px solid;
   border-image-source: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
@@ -2159,7 +2159,7 @@ button,
   align-items: center;
 }
 
-.card__price-cash {
+.card__price p:last-of-type {
   margin: -28px 0 0 3px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
@@ -2170,7 +2170,7 @@ button,
   z-index: 2;
 }
 
-.card__price-shadow {
+.card__price p:first-of-type {
   margin: 0;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
@@ -2288,6 +2288,11 @@ button,
   flex-direction: column;
 }
 
+.promo__item-time {
+  margin: 15px 0 0 0;
+}
+
+.promo__item h3,
 .promo__item p {
   padding: 0 0 3px 0;
   display: -webkit-box;
@@ -2298,20 +2303,22 @@ button,
   gap: 3px;
 }
 
-.promo__item .promo__date {
-  padding: 0 0 3px;
+.promo__item h3 {
+  margin: 0 auto 0 0;
+  max-width: 88px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #ffffff;
   border-bottom: 1px solid #ffffff;
 }
 
-.promo__date--first {
+.promo__item-first h3 {
   max-width: 64px;
 }
 
-.promo__item .promo__date--second {
-  max-width: 88px;
-}
-
-.promo__date-number {
+.promo__item b {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2321,11 +2328,11 @@ button,
   color: #ffffff;
 }
 
-.promo__item-time {
-  margin: 15px 0 0 0;
+.promo__item-time b {
+  margin: 4px 0 0 0;
 }
 
-.promo__date-month {
+.promo__item span:first-of-type {
   padding: 4px 0 0 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2337,16 +2344,9 @@ button,
   font-size: 14px;
 }
 
-.promo__date-month span {
+.promo__item span:first-of-type > span {
   margin: -1px 0 0 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  font-size: 14px;
+  padding: 0;
 }
 
 .promo__btn {
@@ -3530,14 +3530,14 @@ button,
     width: auto;
   }
 
-  .nav-description__city {
+  .nav-description__wrapper p {
     margin: 0 4px 0 0;
     font-size: 34px;
     line-height: 41px;
     text-align: right;
   }
 
-  .nav-description__title {
+  .nav-description__block h1 {
     margin: 6px 0 0 0;
     max-width: 280px;
     font-size: 72px;
@@ -3690,7 +3690,7 @@ button,
     margin: 0 0 76px;
   }
 
-  .card__price-cash {
+  .card__price p:last-of-type {
     margin: -35px 0 0 1px;
   }
 
@@ -3722,33 +3722,35 @@ button,
     margin: 0 0 0 11px;
   }
 
-  .promo__item p {
-    padding: 0 0 1px 0;
-  }
-
-  .promo__item .promo__date {
-    margin: 0 0 2px 0;
-    padding: 0 0 1px 0;
-  }
-
-  .promo__date--first {
-    max-width: 42px;
-  }
-
-  .promo__date-number {
-    font-size: 24px;
-  }
-
   .promo__item-time {
     margin: 3px 0 0 0;
   }
 
-  .promo__date-month {
+  .promo__item h3,
+  .promo__item p {
+    padding: 0 0 1px 0;
+  }
+
+  .promo__item h3 {
+    margin: 0 0 2px 0;
+    padding: 0 0 1px 0;
+    font-size: 12px;
+  }
+
+  .promo__item-first h3 {
+    max-width: 42px;
+  }
+
+  .promo__item b {
+    font-size: 24px;
+  }
+
+  .promo__item span:first-of-type {
     padding: 0;
     font-size: 10px;
   }
 
-  .promo__date-month span {
+  .promo__item span:first-of-type > span {
     margin: -3px 0 0 0;
     font-size: 10px;
   }
@@ -4116,13 +4118,17 @@ button,
 
   .main-header {
     padding-top: 15px;
-    padding-bottom: 81px;
+    padding-bottom: 80px;
   }
 
   .main-nav__logo {
     margin: 0;
     width: 68px;
     height: 23px;
+  }
+
+  .main-nav__phone {
+    margin: 1px 1px 0 0;
   }
 
   .main-nav__phone a {
@@ -4143,7 +4149,7 @@ button,
     width: 100%;
   }
 
-  .nav-description__city {
+  .nav-description__wrapper p {
     margin: 0 3px 0 0;
     font-size: 28px;
     line-height: 34px;
@@ -4155,7 +4161,7 @@ button,
     display: block;
   }
 
-  .nav-description__title {
+  .nav-description__block h1 {
     margin: 0 auto;
   }
 
@@ -4195,7 +4201,7 @@ button,
   .gum__description p {
     margin: 0;
     width: 100%;
-    padding: 0 20px 0 0;
+    padding: 0 28px 0 0;
     text-align: left;
   }
 
@@ -4285,12 +4291,12 @@ button,
     max-width: 100%;
   }
 
-  .card__price-cash {
+  .card__price p:last-of-type {
     margin: -27px 0 0 3px;
     font-size: 48px;
   }
 
-  .card__price-shadow {
+  .card__price p:first-of-type {
     font-size: 80px;
   }
 
@@ -4328,17 +4334,13 @@ button,
     padding: 0;
   }
 
-  .promo__item .promo__date {
-    margin: 0 0 -4px;
-    padding: 0 0 0;
-  }
-
-  .promo__item .promo__date--second {
-    margin: 0;
-  }
-
   .promo__item-time {
     margin: 5px 0 0 0;
+  }
+
+  .promo__item h3 {
+    margin: 0 0 -4px;
+    padding: 0 0 0;
   }
 
   .promo__btn {

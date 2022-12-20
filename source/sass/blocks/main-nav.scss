@@ -49,6 +49,10 @@
 
   display: flex;
   flex-wrap: wrap;
+
+  @include vp-767 {
+    margin: 1px 1px 0 0;
+  }
 }
 
 .main-nav__phone a {

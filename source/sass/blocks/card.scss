@@ -27,7 +27,7 @@
 }
 
 .card:hover,
-.card:focus,
+.card:focus-within,
 .card:active {
   border: 7px solid;
   border-image-source: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
@@ -88,7 +88,7 @@
   }
 }
 
-.card__price-cash {
+.card__price p:last-of-type {
   margin: -28px 0 0 3px;
 
   font-family: $ff-robotocondensed;
@@ -110,7 +110,7 @@
   }
 }
 
-.card__price-shadow {
+.card__price p:first-of-type {
   margin: 0;
 
   font-family: $ff-robotocondensed;

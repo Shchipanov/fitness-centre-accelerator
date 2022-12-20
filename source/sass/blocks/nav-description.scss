@@ -1,5 +1,5 @@
-.nav-description__city,
-.nav-description__title {
+.nav-description__wrapper p,
+.nav-description__wrapper h1 {
   margin: 0;
 }
 
@@ -20,7 +20,7 @@
   }
 }
 
-.nav-description__city {
+.nav-description__wrapper p {
   margin: 0 50px 0 0;
 
   font-family: $ff-alumnisans;
@@ -48,7 +48,6 @@
 }
 
 .nav-description__block {
-  //padding-left: 0;
   position: relative;
 
   display: flex;
@@ -64,7 +63,7 @@
   }
 }
 
-.nav-description__title {
+.nav-description__block h1 {
   margin: 15px 0 0 0;
 
   font-family: $ff-alumnisans;

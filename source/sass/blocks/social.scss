@@ -5,7 +5,6 @@
   display: grid;
   grid-template-columns: repeat(3, 25px);
   justify-content: end;
-  //justify-items: flex-end;
   gap: 11px;
 
   list-style-type: none;
@@ -27,8 +26,6 @@
 
   background-color: $color-default-white;
   border-radius: 50%;
-  //color: inherit;
-  //transition: transform $trans-default;
 
   &:hover,
   &:active,
