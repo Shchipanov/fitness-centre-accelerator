@@ -5,7 +5,9 @@ export const initVideo = function () {
   const link = document.querySelector('[data-video-btn]');
   const boxVideo = document.querySelector('[data-video]');
 
-  if (link) {
+  if (!link) {
+    return;
+  } else {
     link.addEventListener('click', (evt) => {
       evt.preventDefault();
 
